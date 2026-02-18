@@ -1,0 +1,25 @@
+{
+  "name": "Atinderpal Singh - Full Stack Developer Portfolio",
+  "short_name": "Atinder Portfolio",
+  "description": "Portfolio of Atinderpal Singh - Computer Science Student & Full Stack Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/LqDzLGL/download.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.ibb.co/LqDzLGL/download.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["technology", "portfolio", "developer"],
+  "lang": "en",
+  "dir": "ltr"
+}
