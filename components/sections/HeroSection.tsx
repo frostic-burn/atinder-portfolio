@@ -1,44 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import dynamic from "next/dynamic"
 import { Button } from "@/components/ui/button"
-import ErrorBoundary from "@/components/ErrorBoundary"
 import SplitText from "@/components/reactbits/SplitText"
 import GradientText from "@/components/reactbits/GradientText"
 import StarBorder from "@/components/reactbits/StarBorder"
 
-const Orb = dynamic(() => import("@/components/Orb"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-[600px] h-[600px] opacity-30 flex items-center justify-center">
-      <div className="w-16 h-16 rounded-full bg-gray-700 animate-pulse"></div>
-    </div>
-  ),
-})
-
-export default function HeroSection({ mounted }: { mounted: boolean }) {
+export default function HeroSection() {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Orb Background Effect */}
-      {mounted && (
-        <div className="absolute inset-0 z-10 pointer-events-none">
-          <div className="w-full h-full flex items-center justify-center pointer-events-auto">
-            <div className="w-[600px] h-[600px] opacity-60 pointer-events-auto relative z-10">
-              <ErrorBoundary
-                fallback={
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 animate-pulse"></div>
-                  </div>
-                }
-              >
-                <Orb hoverIntensity={0.5} rotateOnHover={true} hue={0} forceHoverState={false} />
-              </ErrorBoundary>
-            </div>
-          </div>
-        </div>
-      )}
-
       <div className="container relative z-30 px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

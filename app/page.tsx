@@ -31,7 +31,7 @@ export default function Home() {
             </div>
           }
         >
-          <HeroSection mounted={mounted} />
+          <HeroSection />
         </ErrorBoundary>
 
         {/* About Section */}
